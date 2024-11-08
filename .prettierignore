@@ -1,0 +1,6 @@
+dist
+coverage
+node_modules
+.github
+*.md
+*.d.ts
