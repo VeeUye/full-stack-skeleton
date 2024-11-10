@@ -9,12 +9,12 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/test/setup/index.ts'],
-    include: ['src/**/*.{test,spec}.{js,jsx,ts,tsx}'],
+    setupFiles: './apps/web/src/test/setup/index.ts',
+    include: ['apps/web/src/**/*.{test,spec}.{ts,tsx}'],
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './apps/web/src'),
     },
   },
 })

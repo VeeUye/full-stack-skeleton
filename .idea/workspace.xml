@@ -5,18 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc919bcf-1e26-46bb-b2ef-6e7f2d3576a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/jest.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/test/dom.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/test/types/types-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/test/vitest.setup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/atoms/Button/index.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/atoms/Button/index.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/atoms/ThemeToggle/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/atoms/ThemeToggle/index.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/contexts/theme/ThemeContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/contexts/theme/ThemeContext.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/contexts/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/contexts/theme/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/contexts/theme/theme.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/contexts/theme/theme.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/contexts/theme/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/contexts/theme/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/styles/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/styles/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/styles/themes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/styles/themes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/test/dom.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/test/mocks/theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/test/mocks/theme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/test/setup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/test/setup/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/test/utils/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/test/utils/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallaby.js" beforeDir="false" afterPath="$PROJECT_DIR$/wallaby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/Button/index.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/Button/index.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/Button/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/Button/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/ThemeToggle/index.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/ThemeToggle/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/atoms/ThemeToggle/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/theme/ThemeContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/theme/ThemeProvider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/theme/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/theme/theme.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/theme/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useTheme.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_reset.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/themes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mocks/theme.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/setup/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/types/jest-dom.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/utils/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/verify.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/scss.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +97,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/veeuye/projects/personal/compound-interest-calculator/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/veeuye/projects/personal/full-stack-skeleton/node_modules/typescript/lib&quot;
   }
 }</component>
@@ -90,7 +133,8 @@
       <workItem from="1730977902145" duration="19000" />
       <workItem from="1730977926666" duration="1990000" />
       <workItem from="1731264523728" duration="1178000" />
-      <workItem from="1731265847175" duration="1149000" />
+      <workItem from="1731265847175" duration="2512000" />
+      <workItem from="1731268371906" duration="1737000" />
     </task>
     <servers />
   </component>

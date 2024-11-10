@@ -12,6 +12,6 @@ describe('ThemeToggle', () => {
   it('displays correct initial theme icon', () => {
     render(<ThemeToggle />)
     const button = screen.getByTestId('theme-toggle')
-    expect(button).toHaveTextContent('☀️') // Light theme by default
+    expect(button).toHaveTextContent('☀️')
   })
 })

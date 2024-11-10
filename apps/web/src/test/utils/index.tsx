@@ -1,13 +1,14 @@
 import React from 'react'
-import { render as rtlRender, RenderOptions } from '@testing-library/react'
-import { ThemeProvider } from '../../contexts/theme'
+import { render as rtlRender } from '@testing-library/react'
+import { ThemeProvider } from '@/contexts/theme'
+import type { RenderOptions } from '@testing-library/react'
 
-// Create wrapper with theme provider
+// Custom wrapper that provides theme context
 function TestWrapper({ children }: { children: React.ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>
 }
 
-// Custom render function
+// Custom render method
 function render(
   ui: React.ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>

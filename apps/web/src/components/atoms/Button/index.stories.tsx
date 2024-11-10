@@ -1,18 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from './index.tsx'
+import { Button } from '@/components/atoms/Button'
 
-// This is the required metadata configuration
 const meta = {
   title: 'Components/Atoms/Button',
   component: Button,
   parameters: {
     layout: 'centered',
   },
-  // Define reusable args
   args: {
     children: 'Button Text',
   },
-  // Define which args can be controlled
   argTypes: {
     variant: {
       control: 'select',

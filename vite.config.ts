@@ -5,10 +5,11 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  root: './apps/web',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@styles': path.resolve(__dirname, './src/styles'), // explicit styles alias
+      '@': path.resolve(__dirname, './apps/web/src'),
+      '@styles': path.resolve(__dirname, './apps/web/src/styles'), // explicit styles alias
     },
   },
   css: {

@@ -3,7 +3,6 @@ import { vi } from 'vitest'
 import { ThemeContext } from '../../contexts/theme/ThemeContext'
 import type { Theme } from '../../contexts/theme/types'
 
-// Define base theme types inline to avoid circular dependencies
 const lightTheme = {
   colors: {
     primary: '#0066cc',

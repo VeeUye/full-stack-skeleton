@@ -21,15 +21,7 @@ describe('App', () => {
     render(<App />)
 
     const app = screen.getByTestId('app-root')
-    // Use getComputedStyle for better check of applied styles
     const styles = window.getComputedStyle(app)
     expect(styles.backgroundColor).not.toBe('')
-  })
-
-  // Add this test to help debug
-  it('renders entire app structure', () => {
-    const { container } = render(<App />)
-    // Log the DOM structure to help debug
-    console.log(container.innerHTML)
   })
 })
