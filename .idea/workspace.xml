@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc919bcf-1e26-46bb-b2ef-6e7f2d3576a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/jest.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/hooks/useTheme.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/test/dom.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/test/types/types-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/test/vitest.setup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallaby.js" beforeDir="false" afterPath="$PROJECT_DIR$/wallaby.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +55,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/veeuye/projects/personal/compound-interest-calculator/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/veeuye/projects/personal/vite-react-starter-project/node_modules/typescript/lib&quot;
+    &quot;ts.external.directory.path&quot;: &quot;/Users/veeuye/projects/personal/full-stack-skeleton/node_modules/typescript/lib&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -78,10 +89,23 @@
       <workItem from="1730904652214" duration="2146000" />
       <workItem from="1730977902145" duration="19000" />
       <workItem from="1730977926666" duration="1990000" />
+      <workItem from="1731264523728" duration="1178000" />
+      <workItem from="1731265847175" duration="1149000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
