@@ -1,32 +1,66 @@
-# Modern React Project Template
+# Full-Stack Monorepo Template
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18.2-blue.svg)](https://expressjs.com/)
 [![Vite](https://img.shields.io/badge/Vite-5.4.10-blue.svg)](https://vitejs.dev/)
 [![Testing Library](https://img.shields.io/badge/Testing%20Library-16.0.1-blue.svg)](https://testing-library.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-2.1.4-blue.svg)](https://vitest.dev/)
 [![Storybook](https://img.shields.io/badge/Storybook-8.4.2-blue.svg)](https://storybook.js.org/)
-[![Deploy](https://github.com/veeuye/vite-react-starter-project/actions/workflows/deploy.yml/badge.svg)](https://github.com/veeuye/vite-react-starter-project/actions/workflows/deploy.yml)
+[![Deploy](https://github.com/veeuye/full-stack-skeleton/actions/workflows/deploy.yml/badge.svg)](https://github.com/veeuye/full-stack-skeleton/actions/workflows/deploy.yml)
 
-A modern React project template with TypeScript, Vite, Testing Library, and Storybook. Features atomic design
-principles, CSS Modules, comprehensive testing setup, and theme toggle component.
+A modern full-stack monorepo template with TypeScript, React, Express, Vite, and comprehensive testing setup. Features
+atomic design principles, CSS Modules, and theme system.
+
+## Project Structure
+
+```
+.
+├── apps
+│   ├── api             # Express backend
+│   │   ├── src
+│   │   │   ├── __tests__
+│   │   │   └── index.ts
+│   │   └── ...
+│   └── web            # React frontend
+│       ├── src
+│       │   ├── components
+│       │   ├── contexts
+│       │   ├── hooks
+│       │   └── styles
+│       └── ...
+├── packages           # Shared packages
+│   ├── configs       # Shared configurations
+│   └── shared       # Shared utilities/types
+└── ...
+```
 
 ## Features
+
+### Frontend (Web)
 
 - 🚀 **Vite** - Lightning fast build tool
 - 📝 **TypeScript** - Type safety with strict mode
 - 🎨 **CSS Modules** + **SASS** - Scoped styling with preprocessor
 - 📚 **Storybook** - Component documentation and testing
-- ✅ **Testing Library** - Component and integration testing
-- 🎭 **Theme System** - Built-in dark/light theme switching with persistent storage
-    - Elegant theme toggle component with smooth transitions
-    - Type-safe theme configuration
-    - Automatic system preference detection
-    - Local storage persistence
-- 📐 **Atomic Design** - Scalable component architecture
+- ✅ **Vitest** + **Testing Library** - Component and integration testing
+- 🎭 **Theme System** - Dark/light theme with system preference detection
+
+### Backend (API)
+
+- 🛠 **Express** - Fast, unopinionated web framework
+- 🔒 **TypeScript** - Type-safe backend development
+- 🧪 **Vitest** - Unit and integration testing
+- 🛡 **Helmet** - Security middleware
+- 🌐 **CORS** - Cross-origin resource sharing
+
+### Shared
+
+- 📦 **pnpm** - Fast, disk space efficient package manager
 - 🔍 **ESLint** + **Prettier** - Code quality tools
-- 🪝 **Husky** + **lint-staged** - Git hooks for quality control
+- 🪝 **Husky** + **lint-staged** - Git hooks
 - 📋 **Semantic Commits** - Standardized commit messages
-- 🚀 **GitHub Actions** - Automated deployment to GitHub Pages
+- 🚀 **GitHub Actions** - CI/CD pipeline
 
 ## Quick Start
 
@@ -41,65 +75,175 @@ principles, CSS Modules, comprehensive testing setup, and theme toggle component
 cd YOUR_NEW_REPO
 
 # Install dependencies
-npm install
-# Start development server
+pnpm install
+pnpm dev              # Start all apps in parallel
 
-npm run dev
 ```
 
 ## Available Scripts
 
-| Command                 | Description               |
-|-------------------------|---------------------------|
-| `npm run dev`           | Start development server  |
-| `npm run build`         | Build for production      |
-| `npm test`              | Run tests                 |
-| `npm run test:coverage` | Run tests with coverage   |
-| `npm run storybook`     | Start Storybook server    |
-| `npm run lint`          | Run ESLint                |
-| `npm run format`        | Format code with Prettier |
-| `npm run type-check`    | Check TypeScript types    |
-| `npm run commit`        | Interactive commit helper |
+### Workspace Scripts
 
-## Deployment
-
-This project uses GitHub Actions for automated deployment to GitHub Pages.
-
-### Deployment Process
-
-1. Push changes to the `main` branch
-2. GitHub Actions automatically:
-    - Builds the project
-    - Runs tests
-    - Deploys to GitHub Pages
-
-### Manual Deployment
+Run these commands from the root directory to manage all apps:
 
 ```bash
-# Build locally
-npm run build
+# Development
+pnpm dev              # Start all apps in parallel
+pnpm --filter web dev # Start only frontend
+pnpm --filter api dev # Start only backend
 
-# Preview build
-npm run preview
+# Testing
+pnpm test            # Test all apps
+pnpm --filter web test
+pnpm --filter api test
+
+# Building
+pnpm build           # Build all apps
+pnpm --filter web build
+pnpm --filter api build
+
+# Other
+pnpm lint           # Lint all apps
+pnpm type-check     # Type check all code
+pnpm format         # Format all code
+pnpm commit         # Interactive commit helper
 ```
 
-View the deployment status in the [Actions tab](https://github.com/[your-username]/[repo-name]/actions)
+### Available Commands
 
-## Project Structure
+| Command           | Description               | Scope     |
+|-------------------|---------------------------|-----------|
+| `pnpm dev`        | Start development servers | All apps  |
+| `pnpm build`      | Build for production      | All apps  |
+| `pnpm test`       | Run tests                 | All apps  |
+| `pnpm lint`       | Run linter                | All apps  |
+| `pnpm type-check` | Check TypeScript          | All apps  |
+| `pnpm format`     | Format code               | All apps  |
+| `pnpm commit`     | Interactive commit helper | Root only |
 
+### Frontend-specific Commands
+
+Use `pnpm --filter web` followed by:
+
+| Command      | Description             |
+|--------------|-------------------------|
+| `dev`        | Start Vite dev server   |
+| `test`       | Run Vitest tests        |
+| `test:watch` | Run tests in watch mode |
+| `lint`       | Lint frontend code      |
+| `storybook`  | Start Storybook server  |
+
+### Backend-specific Commands
+
+Use `pnpm --filter api` followed by:
+
+| Command | Description              |
+|---------|--------------------------|
+| `dev`   | Start development server |
+| `build` | Build for production     |
+| `start` | Start production server  |
+| `test`  | Run Vitest tests         |
+| `lint`  | Lint backend code        |
+
+### Examples
+
+```bash
+# Development examples
+pnpm dev                  # Start everything
+pnpm --filter web dev     # Only start frontend
+pnpm --filter api dev     # Only start backend
+
+# Testing examples
+pnpm test                 # Test everything
+pnpm --filter web test    # Only test frontend
+pnpm --filter api test    # Only test backend
+
+# Building examples
+pnpm build                # Build everything
+pnpm --filter web build   # Only build frontend
+pnpm --filter api build   # Only build backend
 ```
-src/
-├── components/        # Components following atomic design
-│   ├── atoms/        # Basic building blocks
-│   ├── molecules/    # Combinations of atoms
-│   └── organisms/    # Complex components
-├── contexts/         # React contexts
-├── hooks/           # Custom React hooks
-├── styles/          # Global styles and variables
-└── test/            # Test utilities and setup
+
+Pro Tips:
+
+- Use `--filter` to target specific apps
+- Multiple filters can be applied: `pnpm --filter web --filter api test`
+- Use `pnpm -r run <script>` to run a script in all packages that have it
+- Add `-w` flag to run a script in the root workspace: `pnpm -w lint`
+
+## Semantic Commits
+
+This project uses an interactive commit script to ensure consistent, meaningful commit messages. The script guides you
+through creating semantic commits that follow conventional commits specification.
+
+### Using the Commit Script
+
+```bash
+# Instead of git commit, use:
+pnpm commit
 ```
 
-## Component Structure
+The script will:
+
+1. Show available commit types with descriptions
+2. Prompt you to select a type
+3. Guide you through writing a clear commit message
+4. Format and create the commit
+
+### Commit Types
+
+| Type       | Description                                         | Example                             |
+|------------|-----------------------------------------------------|-------------------------------------|
+| `feat`     | New features                                        | `feat: add user authentication`     |
+| `fix`      | Bug fixes                                           | `fix: resolve button click handler` |
+| `docs`     | Documentation only                                  | `docs: update API readme`           |
+| `style`    | Code style/formatting                               | `style: format with prettier`       |
+| `refactor` | Code changes that neither fix bugs nor add features | `refactor: simplify user model`     |
+| `test`     | Adding or modifying tests                           | `test: add user registration tests` |
+| `chore`    | Maintenance tasks, deps, etc                        | `chore: update dependencies`        |
+| `perf`     | Performance improvements                            | `perf: optimize image loading`      |
+| `ci`       | CI/CD changes                                       | `ci: add github actions workflow`   |
+| `revert`   | Revert previous changes                             | `revert: remove faulty feature`     | 
+
+## Testing Strategy
+
+### Frontend Testing
+
+- Uses Vitest with Testing Library
+- Component tests with familiar jest-dom assertions
+- Integration tests for key user flows
+- Storybook for visual testing
+
+```typescript
+// Example component test
+import { render, screen } from '@/test/utils'
+
+test('renders component', () => {
+  render(<MyComponent / >)
+  expect(screen.getByText('Hello')).toBeInTheDocument()
+})
+```
+
+### Backend Testing
+
+- Uses Vitest for unit tests
+- Supertest for API integration tests
+- Isolated test database for data layer tests
+
+```typescript
+// Example API test
+import request from 'supertest'
+import app from '../index'
+
+test('health check', async () => {
+  const response = await request(app).get('/health')
+  expect(response.status).toBe(200)
+})
+```
+
+## Development Guidelines
+
+### Component Structure
 
 ```
 ComponentName/
@@ -109,66 +253,37 @@ ComponentName/
 └── styles.module.scss  # Scoped styles
 ```
 
-## Semantic Commits
+### Semantic Commits
 
-The project uses an interactive commit script to ensure consistent commit messages.
+Format: `<type>: <description>`
 
-### Usage
+Example: `feat: add user authentication`
 
-```bash
-# Run the interactive commit script
-npm run commit
+Types:
+
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation
+- `style`: Code style change
+- `refactor`: Code refactoring
+- `test`: Adding/updating tests
+- `chore`: Maintenance tasks
+
+## Environment Setup
+
+### Frontend (.env)
+
+```
+VITE_API_URL=http://localhost:3000
 ```
 
-The script will prompt you to:
+### Backend (.env)
 
-1. Select a commit type (1-10)
-2. Enter your commit message
-
-### Available Types
-
-| Type       | Description    | Example                             |
-|------------|----------------|-------------------------------------|
-| `feat`     | New feature    | `feat: add user authentication`     |
-| `fix`      | Bug fix        | `fix: resolve button click event`   |
-| `docs`     | Documentation  | `docs: update API references`       |
-| `style`    | Code style     | `style: format using prettier`      |
-| `refactor` | Code refactor  | `refactor: simplify error handling` |
-| `test`     | Testing        | `test: add unit tests for auth`     |
-| `chore`    | Maintenance    | `chore: update dependencies`        |
-| `perf`     | Performance    | `perf: optimize image loading`      |
-| `ci`       | CI/CD changes  | `ci: add github actions workflow`   |
-| `revert`   | Revert changes | `revert: remove faulty feature`     |
-
-## Theme System
-
-A type-safe theme implementation combining CSS Modules with React Context.
-
-### Usage
-
-```tsx
-import { ThemeToggle } from '@/components/atoms/ThemeToggle'
-import styles from './Header.module.scss'
-
-function Header() {
-  return (
-    <header className={styles.header}>
-      <ThemeToggle />
-    </header>
-  )
-}
 ```
-
-### Features
-
-- 🎨 CSS Modules for scoped styling
-- 💾 Theme persistence across sessions
-- ⌨️ Keyboard accessible theme toggle
-- 🔒 Type-safe theme values
-- 🎭 Light/Dark mode with system preference detection
+PORT=3000
+NODE_ENV=development
+```
 
 ## License
 
 MIT
-
----
