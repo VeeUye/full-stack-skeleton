@@ -48,7 +48,7 @@ atomic design principles, CSS Modules, and theme system.
 
 ### Backend (API)
 
-- 🛠 **Express** - Fast, unopinionated web framework
+- 🛠 **Express** - Robust backend API
 - 🔒 **TypeScript** - Type-safe backend development
 - 🧪 **Vitest** - Unit and integration testing
 - 🛡 **Helmet** - Security middleware
