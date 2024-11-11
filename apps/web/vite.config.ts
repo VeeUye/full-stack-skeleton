@@ -10,9 +10,10 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
     },
   },
+  base: './',
   test: {
     globals: true,
-    environment: 'happy-dom', // Using happy-dom instead of jsdom
+    environment: 'happy-dom',
     setupFiles: './src/test/setup/index.ts',
     include: ['src/**/*.{test,spec}.{ts,tsx}'],
     coverage: {

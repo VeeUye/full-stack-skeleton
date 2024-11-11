@@ -100,7 +100,9 @@ pnpm --filter api test
 # Building
 pnpm build           # Build all apps
 pnpm --filter web build
+pnpm --filter web preview
 pnpm --filter api build
+
 
 # Other
 pnpm lint           # Lint all apps
@@ -269,21 +271,43 @@ Types:
 - `test`: Adding/updating tests
 - `chore`: Maintenance tasks
 
-## Environment Setup
+## Development Mode
 
-### Frontend (.env)
+The template runs in a fully local development environment:
 
-```
-VITE_API_URL=http://localhost:3000
+- Frontend: `http://localhost:5173`
+- API: `http://localhost:3000`
+
+## Production Deployment
+
+### Frontend (GitHub Pages)
+
+The frontend is automatically deployed to GitHub Pages when pushing to main.
+
+To set up:
+
+1. Enable GitHub Pages in repository settings
+2. Set source to "GitHub Actions"
+
+To verify deployment:
+
+```bash
+# Build and preview frontend locally
+pnpm build:web
+pnpm --filter web preview
 ```
 
-### Backend (.env)
+### API (Development)
 
-```
-PORT=3000
-NODE_ENV=development
-```
+Currently configured for local development only. For production deployment, you would need to:
+
+1. Choose a hosting platform (Render, Railway, Heroku, etc.)
+2. Update API URL in frontend environment
+3. Configure CORS settings in backend
 
 ## License
 
 MIT
+
+
+
