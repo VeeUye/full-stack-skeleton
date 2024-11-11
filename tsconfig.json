@@ -18,26 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "types": [
-      "vitest/globals",
-      "@testing-library/jest-dom"
-    ]
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src"
-  ],
+  "include": [],
   "references": [
     {
-      "path": "./tsconfig.node.json"
+      "path": "./apps/web"
+    },
+    {
+      "path": "./apps/api"
     }
   ]
 }

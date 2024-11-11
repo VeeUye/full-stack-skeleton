@@ -1,28 +1,28 @@
+// eslint-disable-next-line no-undef
 module.exports = function () {
   return {
-    autoDetect: true,
-
+    testFramework: 'vitest',
     files: [
       'src/**/*.{ts,tsx}',
-      'src/**/*.scss',
       '!src/**/*.test.{ts,tsx}',
-      '!src/**/*.spec.{ts,tsx}',
       { pattern: 'package.json', instrument: false },
       { pattern: 'tsconfig.json', instrument: false },
       { pattern: 'vite.config.ts', instrument: false },
+      { pattern: 'vitest.config.ts', instrument: false },
     ],
-
-    tests: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}'],
-
+    tests: ['src/**/*.test.{ts,tsx}'],
     env: {
       type: 'node',
-      runner: 'node',
+      params: {
+        runner: '--experimental-vm-modules',
+      },
     },
-
-    testFramework: 'vitest',
-
-    setup: function () {
-      require('./src/test/setup/index.ts')
+    setup: function (wallaby) {
+      wallaby.testFramework.configure({
+        globals: true,
+        environment: 'happy-dom',
+        setupFiles: ['./src/test/setup/index.ts'],
+      })
     },
   }
 }

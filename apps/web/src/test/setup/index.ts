@@ -1,9 +1,11 @@
 import '@testing-library/jest-dom'
-import { vi } from 'vitest'
+import * as matchers from '@testing-library/jest-dom/matchers'
+import { expect, vi, afterEach } from 'vitest'
 import { cleanup } from '@testing-library/react'
-import { afterEach } from 'vitest'
 
-// Mock storage
+expect.extend(matchers)
+
+// Mock localStorage
 const localStorageMock = {
   getItem: vi.fn(),
   setItem: vi.fn(),
@@ -24,6 +26,7 @@ window.ResizeObserver = vi.fn().mockImplementation(() => ({
   disconnect: vi.fn(),
 }))
 
+// Cleanup after each test
 afterEach(() => {
   cleanup()
   vi.clearAllMocks()
