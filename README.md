@@ -1,4 +1,4 @@
-# Full-Stack Monorepo Template
+# Full-Stack Skeleton Template
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
