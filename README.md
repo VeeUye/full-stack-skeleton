@@ -255,22 +255,6 @@ ComponentName/
 └── styles.module.scss  # Scoped styles
 ```
 
-### Semantic Commits
-
-Format: `<type>: <description>`
-
-Example: `feat: add user authentication`
-
-Types:
-
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation
-- `style`: Code style change
-- `refactor`: Code refactoring
-- `test`: Adding/updating tests
-- `chore`: Maintenance tasks
-
 ## Development Mode
 
 The template runs in a fully local development environment:
