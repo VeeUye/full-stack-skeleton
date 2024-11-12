@@ -53,6 +53,7 @@ atomic design principles, CSS Modules, and theme system.
 - 🧪 **Vitest** - Unit and integration testing
 - 🛡 **Helmet** - Security middleware
 - 🌐 **CORS** - Cross-origin resource sharing
+- 🗃️ **PostgreSQL** + **TypeORM** - Database integration
 
 ### Shared
 
@@ -61,6 +62,11 @@ atomic design principles, CSS Modules, and theme system.
 - 🪝 **Husky** + **lint-staged** - Git hooks
 - 📋 **Semantic Commits** - Standardized commit messages
 - 🚀 **GitHub Actions** - CI/CD pipeline
+
+## Prerequisites
+
+- Node.js
+- PostgreSQL 14+
 
 ## Quick Start
 
@@ -74,9 +80,19 @@ atomic design principles, CSS Modules, and theme system.
   
 cd YOUR_NEW_REPO
 
+# Setup your local database
+createdb your_db_name 
+
 # Install dependencies
-pnpm install
-pnpm dev              # Start all apps in parallel
+pnpm install   
+
+# Configure database (apps/api/.env)
+DB_NAME=your_db_name
+DB_USER=your_username
+DB_PASSWORD=your_password       
+
+# Start development 
+pnpm dev              
 
 ```
 
